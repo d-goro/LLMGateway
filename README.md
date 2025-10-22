@@ -110,8 +110,13 @@ A lightweight, high-performance LLM gateway service in Go that routes requests t
 
 ### Prerequisites
 
-- Go 1.20 or higher
-- OpenAI and/or Anthropic API keys
+**Choose one:**
+- **Docker** (recommended - no Go installation needed), OR
+- **Go 1.20+** (to build from source)
+
+**API Keys (optional for testing):**
+- OpenAI and/or Anthropic API keys (not required to run tests with example keys)
+
 
 ### Installation
 
