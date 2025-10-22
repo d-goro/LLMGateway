@@ -4,9 +4,31 @@ Complete guide to testing the LLM Gateway.
 
 ## Quick Start
 
-### 1. Start the Gateway
+### Run All Tests (Autonomous)
 
-Choose one option:
+The easiest way to test is to run the autonomous test script:
+
+```bash
+./run_all_tests.sh
+```
+
+This script will:
+- ✓ Check if the gateway is running
+- ✓ Automatically start it with Docker if needed
+- ✓ Wait for the gateway to be ready
+- ✓ Run all test scenarios
+- ✓ Optionally stop the gateway after tests
+
+**Options:**
+```bash
+./run_all_tests.sh            # Interactive: prompts to stop if started
+./run_all_tests.sh --cleanup  # Automatic: stops gateway after tests
+./run_all_tests.sh --help     # Show usage information
+```
+
+### Manual Testing
+
+If you prefer to manage the gateway manually:
 
 **Option A: Docker (Recommended)**
 ```bash
@@ -20,14 +42,11 @@ make docker-run
 make run
 ```
 
-### 2. Run All Tests
-
+Then run tests in another terminal:
 ```bash
 # Terminal 2
 ./run_all_tests.sh
 ```
-
-This runs all test scenarios and shows you what to expect.
 
 ## Test Scripts
 

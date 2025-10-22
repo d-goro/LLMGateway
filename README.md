@@ -381,18 +381,21 @@ Unit test coverage includes:
 Test the running gateway with real HTTP requests:
 
 ```bash
-# Run all E2E tests
+# Run all E2E tests (autonomous - starts gateway if needed)
 ./run_all_tests.sh
 
-# Or individual tests
+# Run with auto-cleanup
+./run_all_tests.sh --cleanup
+
+# Or individual tests (require gateway to be running)
 ./test_health.sh          # Health check endpoint
 ./test_metrics.sh         # Metrics endpoint
-./test_chat.sh            # Chat completions (requires running gateway)
+./test_chat.sh            # Chat completions
 ./test_invalid_key.sh     # Invalid authentication
 ./test_no_auth.sh         # Missing authentication
 ```
 
-**Note**: E2E tests require the gateway to be running (`make run` or `make docker-run`)
+**Note**: `run_all_tests.sh` automatically starts the gateway with Docker if it's not running. Individual test scripts require the gateway to be started manually.
 
 ### Testing Guides
 
