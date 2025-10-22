@@ -28,5 +28,19 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# LLM Gateway specific
+keys.json
+gateway
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+.claude/
+.history/
